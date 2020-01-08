@@ -24,7 +24,7 @@ services:
   depends_on:
    - database
   volumes:
-   - ./Spring/target/docker-compose.jar:/docker-compose.jar
+   - ./Spring/target/docker-compose-0.0.1-SNAPSHOT.jar:/docker-compose.jar
   command: ["java", "-jar", "docker-compose.jar"]
   networks:
    - backendNetwork
@@ -39,15 +39,16 @@ services:
    - springapi
   volumes:
    - ./nginx.conf:/etc/nginx/nginx.conf
-   - ./Angular/dist/Angular/:/usr/share/nginx/html
-   networks:
-    - frontendNetwork
+   - ./Angular/dist/Angular:/usr/share/nginx/html
+  networks:
+   - frontendNetwork
+
 volumes:
  compose:
  
 networks:
- backendNetwork
- frontendNetwork
+ backendNetwork:
+ frontendNetwork:
             
         
     
