@@ -2,8 +2,9 @@
 ## Spring Boot + Angular 7 + Docker + MSQL server application
 ######
 
-In order to use the application using docker in Ubuntu go through steps below:
- ##Install
+In order to use the application using docker in Ubuntu go through steps below
+
+ ## Install
  * Install Docker Engine  - use one of these steps from (https://docs.docker.com/install/linux/docker-ce/ubuntu/)
  * Indtall Git:
 	* sudo apt update 
@@ -21,13 +22,15 @@ In order to use the application using docker in Ubuntu go through steps below:
 	* npm -v
 	* install -g @angular/cli@latest
 	* ng -v
- ##Build:
+	
+ ## Build:
  * Clone the repository - (git clone https://github.com/VardanMatevosyan/Docker-Compose-Fullstack-App.git)
  * Go to the Spring folder and build the spring boot jar application:
 	* mvn clean package
  * Go to the Angular folder and build the angular app:
 	* ng build (should create the dist folder with javascript and css files)
- ##Run
+	
+ ## Run
   * Go to the root of the project where you can see docker-compose.yml file open the rerminal and run the command below.
   * docker-compose up
   * Open the browser and type localhost:4200 you will see empty project with no item. In order to add the item use postman. To install the the postman use these commands:
